@@ -10,7 +10,7 @@ Bart::Application.routes.draw do
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
 
-  resources :stations
+  resources :arrivals
 
   # Sample resource route within a namespace:
   #   namespace :admin do
@@ -21,7 +21,7 @@ Bart::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'stations#index'
+  root :to => 'arrivals#index'
 
   # See how all your routes lay out with "rake routes"
 

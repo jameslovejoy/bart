@@ -1,0 +1,18 @@
+<table class="table table-striped table-hover table-bordered">
+  <thead>
+    <tr>
+    <td>Stop</td>
+    <td>Arrivals</td>
+    <td>Map Link</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @stops.each do |stop| %>
+    <tr>
+      <td><%= link_to stop.name, stop.url %></td>
+      <td><%= temporal stop_times[stop.id] %></td>
+      <td><a href="http://maps.google.com/maps?q=<%= stop.lat %>,+<%= stop.lon %>">Google</a></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
